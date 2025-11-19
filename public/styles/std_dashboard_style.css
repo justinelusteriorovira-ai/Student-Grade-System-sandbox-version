@@ -1,0 +1,200 @@
+/* Reset and global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f0f2f5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navigation bar */
+nav {
+  background-color: #013C10;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+nav img {
+  height: 40px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/* Main dashboard content */
+.dashboard-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.main-content {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* Header and action buttons */
+.nav-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.nav-actions h2 {
+  color: #013C10;
+  font-size: 1.5rem;
+}
+
+.Description {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.Description h3 {
+  color: #013C10;
+  font-size: 1.1rem;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-small {
+  background-color: #013C10;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.25s ease;
+}
+
+.btn-small:hover {
+  background-color: #0b6143;
+  transform: scale(1.05);
+}
+
+.btn-small:active {
+  transform: scale(0.97);
+  background-color: #094F36;
+}
+
+/* Filters Section */
+.filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 15px;
+  margin-bottom: 25px;
+}
+
+.filters label {
+  font-weight: 600;
+  color: #013C10;
+}
+
+.filters select {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filters select:hover {
+  border-color: #013C10;
+}
+
+/* Grades Table */
+.grades-section {
+  margin-top: 10px;
+}
+
+.grades-section h3 {
+  color: #094F36;
+  margin-bottom: 15px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f9f9f9;
+  color: #013C10;
+  font-weight: bold;
+}
+
+tr:hover {
+  background-color: #f4f4f4;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 10px;
+  font-size: 0.85rem;
+  color: whitesmoke;
+  background-color: #013C10;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .main-content {
+    padding: 20px;
+  }
+
+  .nav-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .filters {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  table {
+    font-size: 0.85rem;
+  }
+
+  th, td {
+    padding: 8px 5px;
+  }
+
+  .btn-small {
+    font-size: 0.8rem;
+    padding: 7px 12px;
+  }
+}

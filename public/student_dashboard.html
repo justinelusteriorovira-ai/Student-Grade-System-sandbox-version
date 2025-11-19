@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="img/cefi.ico">
+  <title>Student Dashboard | Student Online Grades</title>
+  <link rel="stylesheet" href="styles/std_dashboard_style.css">
+  <script src="scripts/student_dashboard.js" defer></script>
+  
+  <style>
+ #studentName {
+  animation: blink 0.1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { color: #17b602; }
+  50% { color: #ff0000; }
+  100% { color: #000fe6; }
+}
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+  </style>
+
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <img src="https://enrollment.cefi.website/images/cefi-logo.png" alt="cefi-logo" loading="lazy">
+    <div class="logo">Student Online Grades</div>
+  </nav>
+
+  <!-- Dashboard Section -->
+  <div class="dashboard-container">
+    <div class="main-content">
+
+      <!-- Top Action Buttons -->
+      <div class="nav-actions">
+        <h2 id="studentName">Welcome, Student!</h2>
+        <div class="action-buttons">
+          <button class="btn-small" id="resetPasswordBtn">Reset Password</button>
+          <button class="btn-small" id="logoutBtn">Logout</button>
+        </div>
+      </div>
+
+      <div class="Description">
+        <hr>
+        <h3 id="Course">Course: </h3>
+      </div>
+      
+      <!-- Filter Section -->
+      <div class="filters" style="margin-bottom: 20px;">
+        <label for="school-year"><strong>School Year:</strong></label>
+        <select id="school-year">
+          <option value="" disabled selected>Select School Year</option>
+          <option>2020-2021</option>
+          <option>2021-2022</option>
+          <option>2022-2023</option>
+          <option>2023-2024</option>
+          <option>2024-2025</option>
+          <option>2025-2026</option>
+          <option>2026-2027</option>
+          <option>2027-2028</option>
+          <option>2028-2029</option>
+          <option>2029-2030</option>
+          <option>2030-2031</option>
+        </select>
+
+        <label for="semester"><strong>Semester:</strong></label>
+        <select id="semester">
+          <option value="" disabled selected>Select Semester</option>
+          <option>1st</option>
+          <option>2nd</option>
+          <option>3rd (Summer)</option>
+        </select>
+
+        <button class="btn-small" id="initializeBtn">Initialize</button>
+      </div>
+
+      <!-- Grades Table -->
+      <div class="grades-section">
+        <h3>Student Grades</h3>
+        <table id="gradesTable">
+          <thead>
+            <tr>
+              <th>Section</th>
+              <th>Subject Code</th>
+              <th>Description</th>
+              <th>Instructor</th>
+              <th>Units</th>
+              <th>Midterm Grade</th>
+              <th>Final Grade</th>
+              <th>Remarks</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="8" style="text-align:center;">No grades available yet.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    © 2025 CEFI Student Online Grades. All rights reserved. | Calayan Educational Foundation Inc., Philippines | Contact: info@cefi.website
+  </div>
+
+</body>
+</html>

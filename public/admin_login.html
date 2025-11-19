@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="img/cefi.ico">
+  <title>Student Online Grades</title>
+  <link rel="stylesheet" href="styles/login_style.css">
+  <script src="scripts/admin_login.js" defer></script>
+
+</head>
+<body>
+
+  <nav>
+    <img src="https://enrollment.cefi.website/images/cefi-logo.png" alt="cefi-logo" loading="lazy">
+    <div class="logo">Student Online Grades</div>
+  </nav>
+
+  <div class="login-container">
+    <div class="login-box">
+      <!-- Role buttons inside login box -->
+      <div class="role-menu">
+        <button onclick="location.href='professor_login.html'">Professor Login</button>
+        <button onclick="location.href='student_login.html'">Student Login</button>
+      </div>
+      
+      <h2>Admin Login</h2>
+      <form id="loginForm">
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="Enter username" required>
+        </div>
+
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter password" required>
+        </div>
+
+        <button class="btn" type="submit">Login</button>
+        <p id="msg" style="text-align:center; margin-top:10px;"></p>
+        <div id="forget-password">
+          <a href="https://www.instagram.com/p/DOdQXicAdOY/">Forgot password?</a>
+        </div>
+      </form>
+
+      <p id="msg" style="text-align:center; margin-top:10px;"></p>
+    </div>
+  </div>
+
+  <div class="footer">
+    © 2025 CEFI Student Online Grades. All rights reserved. | Calayan Educational Foundation Inc., Philippines | Contact: info@cefi.website
+  </div>
+
+
+</body>
+</html>

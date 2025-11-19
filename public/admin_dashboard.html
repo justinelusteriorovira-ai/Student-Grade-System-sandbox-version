@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="img/cefi.ico">
+  <title>Admin Dashboard | Student Online Grades</title>
+  <link rel="stylesheet" href="styles/admin_dashboard.css">
+  <script src="scripts/admin_dashboard.js" defer></script>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <img src="https://enrollment.cefi.website/images/cefi-logo.png" alt="cefi-logo" loading="lazy">
+    <div class="logo">Student Online Grades</div>
+  </nav>
+
+  <!-- Dashboard Section -->
+  <div class="dashboard-container">
+    <div class="main-content">
+
+      <!-- Top Action Buttons -->
+      <div class="nav-actions">
+        <h2 id="adminName">Welcome, Admin!</h2>
+        <div class="action-buttons">
+          <button class="btn-small" id="resetPasswordBtn">Reset Password</button>
+          <button class="btn-small" id="logoutBtn">Logout</button>
+        </div>
+      </div>
+
+      <!-- Add Professor Account -->
+      <div class="filters" style="margin-bottom: 25px;">
+        <h3>Add Professor Account</h3>
+        <label for="profUsername"><strong>Username:</strong></label>
+        <input type="text" id="profUsername" placeholder="Enter Username">
+
+        <label for="profPassword"><strong>Password:</strong></label>
+        <input type="password" id="profPassword" placeholder="Enter Password">
+
+        <label for="profFullName"><strong>Full Name:</strong></label>
+        <input type="text" id="profFullName" placeholder="Enter Full Name">
+
+        <label for="profDepartment"><strong>Department:</strong></label>
+        <input type="text" id="profDepartment" placeholder="Enter Department">
+
+        <button class="btn-small" id="addProfessorBtn">Add Professor</button>
+      </div>
+
+      <!-- Add Student Account -->
+      <div class="filters" style="margin-bottom: 25px;">
+        <h3>Add Student Account</h3>
+        <label for="studId"><strong>Student ID:</strong></label>
+        <input type="text" id="studId" placeholder="Enter Student ID">
+
+        <label for="studPassword"><strong>Password:</strong></label>
+        <input type="password" id="studPassword" placeholder="Enter Password">
+
+        <label for="studFullName"><strong>Full Name:</strong></label>
+        <input type="text" id="studFullName" placeholder="Enter Full Name">
+
+        <label for="studCourse"><strong>Course:</strong></label>
+        <input type="text" id="studCourse" placeholder="Enter Course">
+
+        <label for="studYear"><strong>Year Level:</strong></label>
+        <input type="number" id="studYear" placeholder="Enter Year Level">
+
+        <label for="studSection"><strong>Section:</strong></label>
+        <input type="text" id="studSection" placeholder="Enter Section">
+
+        <button class="btn-small" id="addStudentBtn">Add Student</button>
+      </div>
+
+      <!-- Add Subject -->
+      <div class="filters" style="margin-bottom: 25px;">
+        <h3>Add Subject</h3>
+        <label for="subjCode"><strong>Subject Code:</strong></label>
+        <input type="text" id="subjCode" placeholder="Enter Subject Code">
+
+        <label for="subjDesc"><strong>Description:</strong></label>
+        <input type="text" id="subjDesc" placeholder="Enter Description">
+
+        <label for="subjUnits"><strong>Units:</strong></label>
+        <input type="number" id="subjUnits" placeholder="Enter Units">
+
+        <button class="btn-small" id="addSubjectBtn">Add Subject</button>
+      </div>
+
+      <!-- Subjects Table -->
+      <div class="grades-section" style="margin-bottom: 25px;">
+        <h3>All Subjects</h3>
+        <table id="subjectsTable">
+          <thead>
+            <tr>
+              <th>Subject Code</th>
+              <th>Description</th>
+              <th>Units</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="4" style="text-align:center;">Loading subjects...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Manage Assignments -->
+      <div class="grades-section">
+        <h3>Professor Assignments</h3>
+        <table id="assignmentsTable">
+          <thead>
+            <tr>
+              <th>Professor</th>
+              <th>Subject</th>
+              <th>Section</th>
+              <th>School Year</th>
+              <th>Semester</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="6" style="text-align:center;">Loading assignments...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Accounts Table -->
+      <div class="grades-section">
+        <h3>All Accounts</h3>
+        <table id="accountsTable">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Role</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="4" style="text-align:center;">Loading accounts...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Assign Professor to Subject -->
+      <div class="filters" style="margin-bottom: 25px;">
+        <h3>Assign Professor to Subject</h3>
+        <label for="assignProf"><strong>Professor:</strong></label>
+        <select id="assignProf">
+          <option value="" disabled selected>Select Professor</option>
+        </select>
+
+        <label for="assignSubject"><strong>Subject:</strong></label>
+        <select id="assignSubject">
+          <option value="" disabled selected>Select Subject</option>
+        </select>
+
+        <label for="assignSection"><strong>Section:</strong></label>
+        <input type="text" id="assignSection" placeholder="Enter Section">
+
+        <label for="assignSchoolYear"><strong>School Year:</strong></label>
+        <input type="text" id="assignSchoolYear" placeholder="e.g., 2024-2025">
+
+        <label for="assignSemester"><strong>Semester:</strong></label>
+        <select id="assignSemester">
+          <option value="" disabled selected>Select Semester</option>
+          <option>1st</option>
+          <option>2nd</option>
+          <option>3rd (Summer)</option>
+        </select>
+
+        <button class="btn-small" id="assignBtn">Assign</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    © 2025 CEFI Student Online Grades. All rights reserved. | Calayan Educational Foundation Inc., Philippines | Contact: info@cefi.website
+  </div>
+
+</body>
+</html>

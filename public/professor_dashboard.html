@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="img/cefi.ico">
+  <title>Professor Dashboard | Student Online Grades</title>
+  <link rel="stylesheet" href="styles/prof_dashboard.css">
+  <script src="scripts/prof_dashboard.js" defer></script>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <img src="https://enrollment.cefi.website/images/cefi-logo.png" alt="cefi-logo" loading="lazy">
+    <div class="logo">Student Online Grades</div>
+  </nav>
+
+  <!-- Dashboard Section -->
+  <div class="dashboard-container">
+    <div class="main-content">
+
+      <!-- Top Action Buttons -->
+      <div class="nav-actions">
+        <h2 id="profName">Welcome, Professor!</h2>
+        <div class="action-buttons">
+          <button class="btn-small" id="resetPasswordBtn">Reset Password</button>
+          <button class="btn-small" id="logoutBtn">Logout</button>
+        </div>
+      </div>
+
+      <!-- Assigned Subjects Table -->
+      <div class="grades-section" style="margin-bottom: 25px;">
+        <h3>My Assigned Subjects</h3>
+        <table id="subjectsTable">
+          <thead>
+            <tr>
+              <th>Subject Code</th>
+              <th>Description</th>
+              <th>Section</th>
+              <th>School Year</th>
+              <th>Semester</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="5" style="text-align:center;">Loading assigned subjects...</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Search Student -->
+      <div class="filters" style="margin-bottom: 25px;">
+        <label for="studentSearch"><strong>Search Student ID:</strong></label>
+        <input type="text" id="studentSearch" placeholder="e.g. 023-750">
+        <button class="btn-small" id="searchBtn">Search</button>
+      </div>
+
+      <!-- Enroll Student -->
+      <div class="filters" style="flex-wrap: wrap; margin-bottom: 25px;">
+        <label for="enrollId"><strong>Student ID:</strong></label>
+        <input type="text" id="enrollId" placeholder="Enter Student ID">
+
+        <label for="subjectCode"><strong>Subject Code:</strong></label>
+        <input type="text" id="subjectCode" placeholder="Enter Subject Code">
+
+        <label for="subjectDesc"><strong>Description:</strong></label>
+        <input type="text" id="subjectDesc" placeholder="Enter Description">
+
+        <button class="btn-small" id="enrollBtn">Enroll Student</button>
+      </div>
+
+      <!-- Enrolled Students Table -->
+      <div class="grades-section">
+        <h3>Enrolled Students</h3>
+        <table id="studentsTable">
+          <thead>
+            <tr>
+              <th>Student ID</th>
+              <th>Student Name</th>
+              <th>Subject Code</th>
+              <th>Description</th>
+              <th>Midterm Grade</th>
+              <th>Final Grade</th>
+              <th>Remarks</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="8" style="text-align:center;">No students enrolled yet.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    © 2025 CEFI Student Online Grades. All rights reserved. | Calayan Educational Foundation Inc., Philippines | Contact: info@cefi.website
+  </div>
+
+</body>
+</html>
